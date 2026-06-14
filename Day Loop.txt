@@ -1,0 +1,21 @@
+Day Starts
+
+Each Agent:
+1. Observe the World
+2. Decide Action
+3. Execute Action
+
+Market Update Prices
+
+Agents Consume Food
+
+Each Agent:
+1. Observe the World
+2. Decide Action
+3. Execute Action
+
+Agents Consume Food
+
+Statistics Saved
+
+Next Day

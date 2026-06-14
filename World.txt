@@ -1,0 +1,26 @@
+Resources:
+FOOD
+CATTLE
+WOOD
+MONEY
+METAL
+COAL
+
+Agent types:
+FARMER
+LUMBERJACK
+MERCHANT
+MINER
+
+
+Agent Attributes:
+MONEY
+FOOD
+WOOD
+METAL
+CATTLE
+COAL
+ENERGY
+
+Daily Needs:
+2food/day

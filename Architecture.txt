@@ -1,0 +1,24 @@
+Core Stack - Python
+
+
+LLM API's - OpenAI API	or Local Models - Llama/Qwen/Mistral
+
+
+Agent Framework - LangChain
+
+
+Database - SQLite
+
+
+
+Others:
+Structure Outputs - pydantic to force agents to return valid actions
+Visualisation - Streamlit
+Memory System - tbd
+
+
+More advanced Feats:
+Network Analisys - NetworkX to visualise friendships, trade networks, alliances
+
+
+

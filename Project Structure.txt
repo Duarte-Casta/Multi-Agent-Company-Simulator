@@ -1,0 +1,19 @@
+multi_agent_company_sim/
+│
+├── agents/
+│   ├── base_agent.py
+│   ├── farmer.py
+│   ├── lumberjack.py
+│   └── merchant.py
+|   |-- miner.py
+│
+├── world/
+│   ├── market.py
+│   └── world.py
+│
+├── models/
+│   └── action.py
+│
+├── main.py
+│
+└── data/
