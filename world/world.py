@@ -23,3 +23,4 @@ class World:
 
         for agent in self.agents:
             print(agent)
+            

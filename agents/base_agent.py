@@ -33,5 +33,7 @@ class Agent:
             f"Food:{self.food} | "
             f"Wood:{self.wood} | "
             f"Coal:{self.coal} | "
-            f"Energy:{self.energy}"
+            f"Energy:{self.energy} | "
+            f"Money:{self.money} | "
+            f"Alive:{self.alive}"
         )
