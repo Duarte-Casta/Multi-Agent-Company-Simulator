@@ -23,9 +23,17 @@ class Agent:
 
 
     def buy_food(self, world):
-        if self.money >= world.market.food_price:
+        if self.money >= world.market.food_sell_price:
             self.food += 1
-            self.money -= world.market.food_price
+            self.money -= world.market.food_sell_price
+
+    def sell_wood(self, world, amount):
+        amount = min(amount, self.wood)
+
+        self.wood -= amount
+        self.money += amount * world.market.wood_buy_price
+
+
 
     def __str__(self):
         return (
