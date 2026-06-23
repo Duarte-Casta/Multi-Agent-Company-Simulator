@@ -2,17 +2,19 @@ from agents.base_agent import Agent
 
 class Farmer(Agent):
     def act(self, world):
-        # Recupera energia
-        if self.food > 0 and self.energy < 5:
-            self.food -= 1
-            self.energy += 3
+        # Rede de segurança: Se o Farmer de alguma forma ficar sem comida, ele compra
+        if self.food < 2:
+            while self.food < 5 and self.money >= world.market.food_sell_price:
+                self.buy_food(world)
+
+        if self.rest_if_needed():
             return
 
         if self.energy >= 5:
             self.food += 3
             self.energy -= 2
 
-        if self.food > 10:
-            excess = self.food - 10
-            self.food -= excess
-            self.money += excess * world.market.food_buy_price
+        # Vende apenas o excedente seguro
+        if self.food > 5:
+            excess = self.food - 5
+            self.sell_food(world, excess)

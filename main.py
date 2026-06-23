@@ -5,22 +5,20 @@ from agents.miner import Miner
 from agents.merchant import Merchant
 world = World()
 
-world.add_agent(Farmer("Farmer1", 10))
-world.add_agent(Farmer("Farmer2", 10))
-world.add_agent(Lumberjack("Jack1", 10))
+# Inicializamos os agentes com algum dinheiro para o arranque da economia
+world.add_agent(Farmer("Farmer1", 20))
+world.add_agent(Farmer("Farmer2", 20))
+world.add_agent(Lumberjack("Jack1", 30))
+world.add_agent(Miner("Miner1", 30))
 
-for _ in range(100):
+# Executa 50 dias para provar a estabilidade do novo modelo econômico
+for _ in range(50):
     world.run_day()
+    if len(world.agents) == 0:
+        print("\n[COLAPSO ECONÓMICO] Todos os agentes morreram.")
+        break
 
-alive = len(world.agents)
-
-total_food = sum(a.food for a in world.agents)
-total_money = sum(a.money for a in world.agents)
-total_wood = sum(a.wood for a in world.agents)
-
-print(
-    f"Alive:{alive} "
-    f"Food:{total_food} "
-    f"Money:{total_money} "
-    f"Wood:{total_wood} "
-)
+print("\n--- RESULTADO FINAL ---")
+print(f"Agentes Vivos: {len(world.agents)}")
+print(f"Dinheiro Total: {sum(a.money for a in world.agents)}")
+print(f"Comida Total: {sum(a.food for a in world.agents)}")

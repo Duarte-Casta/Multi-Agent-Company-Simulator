@@ -1,10 +1,16 @@
 class Market:
     def __init__(self):
-        self.food_stock = 50
-        self.wood_stock = 0
+        #self.food_stock = 50
+        #self.wood_stock = 0
 
-        self.food_buy_price = 5
-        self.food_sell_price = 6
+        self.food_buy_price = 3   
+        self.food_sell_price = 5  
+
+        self.wood_buy_price = 3   
+        self.wood_sell_price = 6  
+
+        self.coal_buy_price = 3   
+        self.coal_sell_price = 6
 
     def agent_sells_food(self, amount):
         self.food_stock += amount
